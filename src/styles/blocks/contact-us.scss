@@ -1,0 +1,95 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.contact-us {
+  &__wrapper {
+    @include page-grid;
+
+    row-gap: 48px;
+  }
+
+  &__form {
+    display: grid;
+    gap: 16px;
+    grid-column: 1 / -1;
+
+    @include on-desktop {
+      grid-column: 1 / 7;
+    }
+  }
+
+  &__info {
+    display: grid;
+    gap: 24px;
+    grid-column: 1 / -1;
+
+    @include on-desktop {
+      grid-column: 8 / -1;
+    }
+  }
+  &__textarea {
+    min-height: 120px;
+    resize: none;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: #f9f9f9;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font: inherit;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: #e0e0e0;
+    }
+
+    &:focus {
+      border-color: #f98921;
+      outline: none;
+    }
+  }
+
+  &__button {
+    height: 56px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: #f98921;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+  }
+
+  &__button:hover {
+    background-color: #1b2129;
+  }
+
+  &__button:active {
+    background-color: #010810;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__item {
+    display: grid;
+    gap: 4px;
+  }
+}
