@@ -9,6 +9,10 @@
   background-position: center;
   background-size: cover;
 
+  @include on-desktop {
+    background-image: url(../images/header-bg-desktop.png);
+  }
+
   &__content {
     display: flex;
     flex-direction: column;

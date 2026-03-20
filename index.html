@@ -330,7 +330,7 @@
           <div class="container">
             <h2 class="section-title">Contact Us</h2>
             <div class="contact-us__wrapper">
-              <form class="contact-us__form">
+              <form class="contact-us__form" onsubmit="this.reset(); return false;">
                 <input
                       type="text"
                       name="name"
@@ -374,9 +374,13 @@
 
                 <div class="contact-us__item">
                   <p class="contact-us__label">Address</p>
-                  <p class="contact-us__text">
-                    400 first ave. suite 700 Minneapolis, MN 55401
-                  </p>
+                  <a
+                    href="https://maps.google.com/?q=400 first ave. suite 700 Minneapolis"
+                    target="_blank"
+                    class="contact-us__link contact-us__text"
+                    >
+                   400 first ave.<br>suite 700 <br>Minneapolis, MN 55401
+                  </a>
                 </div>
               </div>
             </div>
