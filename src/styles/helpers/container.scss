@@ -2,6 +2,8 @@
 @use '../utils/mixins' as *;
 
 .container {
+  margin: 0;
+
   @include content-padding-inline;
 }
 

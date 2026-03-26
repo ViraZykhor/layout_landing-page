@@ -25,7 +25,7 @@
     border: none;
 
     @include on-desktop {
-      grid-column: span 4;
+      grid-column: 1 / 5;
     }
 
     &:hover {
@@ -40,30 +40,25 @@
     @include page-grid;
 
     padding-inline: 0;
-    margin-bottom: 40px;
   }
 
   &__link {
     display: block;
     &--wide {
       @include on-tablet {
-        margin-bottom: 56px;
         grid-column: span 3;
       }
 
       @include on-desktop {
-        margin-bottom: 56px;
         grid-column: span 6;
       }
     }
     &--square {
       @include on-tablet {
-        margin-bottom: 56px;
         grid-column: span 3;
       }
 
       @include on-desktop {
-        margin-bottom: 56px;
         grid-column: span 6;
       }
     }
@@ -76,20 +71,25 @@
     object-fit: cover;
 
     @include on-tablet {
-      aspect-ratio: auto;
       height: 184px;
+      object-fit: cover;
     }
 
     @include on-desktop {
-      aspect-ratio: auto;
       height: 384px;
     }
   }
 
   &__title {
-    margin: 0;
-    font-size: 32px;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 140%;
+
+    @include on-tablet {
+      margin-bottom: 56px;
+      font-size: 24px;
+    }
   }
 }

@@ -7,9 +7,12 @@
 
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
 
   background-image: url(../icons/icon-burger-menu.png);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
   @include hover(transform, scale(1.2));
 
@@ -18,24 +21,12 @@
     height: 32px;
   }
 
-  @include on-desktop {
-    background-image: url(../icons/icon-burger-menu-desktop.png);
-  }
-
   &--phone {
     background-image: url(../icons/icon-phone.png);
-
-    @include on-desktop {
-      background-image: url(../icons/icon-phone-desktop.png);
-    }
   }
 
   &--menu {
     background-image: url(../icons/icon-burger-menu.png);
-
-    @include on-desktop {
-      background-image: url(../icons/icon-burger-menu-desktop.png);
-    }
 
     &:hover {
       background-image: url(../icons/icon-burger-menu-hover.png);
@@ -44,10 +35,6 @@
 
   &--close {
     background-image: url(../icons/icon-close.png);
-
-    @include on-desktop {
-      background-image: url(../icons/icon-close-desktop.png);
-    }
   }
 }
 
