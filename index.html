@@ -9,7 +9,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Landing Page</title>
+    <title>Bang & Olufsen</title>
+
+    <link rel="icon" href="/src/icons/loggo.png"
+    type="image/png">
 
     <link
       rel="preconnect"
@@ -23,6 +26,13 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"
+    crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
     />
     <script type="module" src="/src/scripts/main.js"></script>
   </head>
@@ -42,10 +52,12 @@
               />
             </a>
             <div class="top-bar__icons">
-              <a
-                href="#"
-                class="icon icon--phone"
-              ></a>
+              <div class="top-bar__phone">
+                <a href="tel:+12345555555" class="icon icon--phone"></a>
+                <a href="tel:+12345555555" class="top-bar__number">
+                  +1 234 5555-55-55
+                </a>
+              </div>
               <a
                 href="#menu"
                 class="icon icon--menu"

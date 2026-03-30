@@ -29,4 +29,41 @@
 
     @include hover(transform, scale(1.2));
   }
+
+  &__phone {
+    position: relative;
+  }
+
+  &__number {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%) translateX(0);
+
+    margin-left: 8px;
+    white-space: nowrap;
+
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-align: right;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: $main-text-color;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+      opacity 0.3s,
+      transform 0.3s;
+  }
+
+  &__phone:hover &__number {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
 }
